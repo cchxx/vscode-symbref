@@ -1,8 +1,8 @@
 {
   "name": "vscode-symbref",
-  "displayName": "Code Reference",
-  "description": "Copy code references (file path, class, function, line numbers) to clipboard with customizable detail levels",
-  "version": "0.2.1",
+  "displayName": "Symbol Reference",
+  "description": "Copy symbol-aware code references (file path, class, function, line numbers) to clipboard",
+  "version": "0.2.2",
   "publisher": "xuchen3",
   "repository": {
     "type": "git",
