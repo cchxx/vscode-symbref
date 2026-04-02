@@ -1,0 +1,58 @@
+{
+  "name": "vscode-symbref",
+  "displayName": "Code Reference",
+  "description": "Copy code references (file path, class, function, line numbers) to clipboard with customizable detail levels",
+  "version": "0.2.1",
+  "publisher": "xuchen3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cchxx/vscode-symbref.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeRef.copyFull",
+        "title": "Copy Code Reference (All)"
+      },
+      {
+        "command": "codeRef.copyRef",
+        "title": "Copy Code Reference (Zip)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "codeRef.copyFull",
+        "key": "ctrl+k ctrl+a",
+        "mac": "cmd+k cmd+a",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "codeRef.copyRef",
+        "key": "ctrl+k ctrl+z",
+        "mac": "cmd+k cmd+z",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
